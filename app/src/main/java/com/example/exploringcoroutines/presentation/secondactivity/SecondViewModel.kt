@@ -34,20 +34,10 @@ class SecondViewModel(
             observeInformationUseCase.lastUpdateFlow()
                 .filterNotNull()
                 .map {
-                    when (it){
-                        is UpdateSource.ViewModel -> {
-                            val viewItem = with(it.update) {
-                                UpdateSourceViewItem(updateCount, description)
-                            }
-                            Pair(it, viewItem)
-                        }
-                        is UpdateSource.UseCase -> {
-                            val viewItem = with(it) {
-                                UpdateSourceViewItem(updateCount, description)
-                            }
-                            Pair(it, viewItem)
-                        }
+                    val viewItem = with(it) {
+                        UpdateSourceViewItem(count, description)
                     }
+                    Pair(it, viewItem)
                 }.collect {
                     when(it.first){
                         is UpdateSource.ViewModel -> lastViewModelUpdate.value = it.second

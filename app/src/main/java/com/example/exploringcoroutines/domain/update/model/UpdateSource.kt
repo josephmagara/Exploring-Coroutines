@@ -4,9 +4,9 @@ package com.example.exploringcoroutines.domain.update.model
  * Created by josephmagara on 25/5/20.
  */
 
-sealed class UpdateSource {
-    data class UseCase(val updateCount: Int, val description: String) : UpdateSource()
-    data class ViewModel(val update: ViewModelUpdate): UpdateSource()
+sealed class UpdateSource(val count: Int, val description: String) {
+    data class UseCase(val updateCount: Int) : UpdateSource(updateCount, "From use case")
+    data class ViewModel(val update: ViewModelUpdate): UpdateSource(update.updateCount, update.description)
 }
 
 sealed class ViewModelUpdate(val updateCount: Int, val description: String) {

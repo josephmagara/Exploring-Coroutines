@@ -2,7 +2,7 @@ package com.example.exploringcoroutines.domain.update
 
 import com.example.exploringcoroutines.domain.AppState
 import com.example.exploringcoroutines.domain.update.model.UpdateSource
-import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.*
 
 /**
  * Created by josephmagara on 25/5/20.
@@ -11,8 +11,20 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 @ExperimentalCoroutinesApi
 class UpdateAppStateUseCase constructor(private val appState: AppState) {
 
-    @ExperimentalCoroutinesApi
+    private lateinit var useCaseStateUpdateJob: Job
+
     suspend fun updateState(updateSource: UpdateSource) {
+        startUpdatesFromUseCase()
         appState.lastUpdate.value = updateSource
+    }
+
+    private fun startUpdatesFromUseCase(){
+        if (this::useCaseStateUpdateJob.isInitialized) return
+        useCaseStateUpdateJob = GlobalScope.launch {
+            repeat(1000) {
+                updateState(UpdateSource.UseCase(it))
+                delay(1000L)
+            }
+        }
     }
 }
