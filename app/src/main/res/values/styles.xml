@@ -58,9 +58,11 @@
 
     <style name="Button.PositiveButton">
         <item name="android:colorButtonNormal">@color/sky_blue</item>
+        <item name="android:backgroundTint">@color/sky_blue</item>
     </style>
 
     <style name="Button.NegativeButton">
         <item name="android:colorButtonNormal">@color/danger</item>
+        <item name="android:backgroundTint">@color/danger</item>
     </style>
 </resources>
