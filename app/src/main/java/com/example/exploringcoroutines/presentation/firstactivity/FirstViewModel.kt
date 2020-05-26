@@ -42,7 +42,6 @@ class FirstViewModel(
                         is UpdateSource.ViewModel -> lastViewModelUpdate.value = it.second
                         is UpdateSource.UseCase -> lastUseCaseUpdate.value = it.second
                     }
-
                 }
         }
     }
