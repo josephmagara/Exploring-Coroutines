@@ -64,7 +64,7 @@
         android:id="@+id/first_button_start_emitting"
         style="@style/Button.PositiveButton"
         android:text="@string/start"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/go_to_second_activity_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/first_button_stop_emitting"
         app:layout_constraintTop_toBottomOf="@id/usecase_counter_card" />
@@ -73,8 +73,18 @@
         android:id="@+id/first_button_stop_emitting"
         style="@style/Button.NegativeButton"
         android:text="@string/stop"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/go_to_second_activity_button"
         app:layout_constraintLeft_toRightOf="@id/first_button_start_emitting"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_model_counter_card" />
+
+    <Button
+        android:id="@+id/go_to_second_activity_button"
+        style="@style/Button.NeutralButton"
+        android:text="@string/previous_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_button_stop_emitting"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

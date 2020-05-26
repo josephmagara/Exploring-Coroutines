@@ -1,10 +1,11 @@
 package com.example.exploringcoroutines.presentation.secondactivity
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.exploringcoroutines.R
-import kotlinx.android.synthetic.main.first_activity_main.*
+import com.example.exploringcoroutines.presentation.firstactivity.FirstActivity
 import kotlinx.android.synthetic.main.second_activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -37,5 +38,15 @@ class SecondActivity : AppCompatActivity() {
             second_activity_usecase_counter.text = it.count
             second_view_usecase_counter_subtitle.text = it.updateSourceDescription
         })
+
+        go_to_first_activity_button.setOnClickListener {
+            startFirstActivity()
+        }
+    }
+
+    private fun startFirstActivity(){
+        val intent = Intent(baseContext, FirstActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

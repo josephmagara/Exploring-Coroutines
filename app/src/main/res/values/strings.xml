@@ -6,4 +6,6 @@
     <string name="usecase_update">UseCase Update Counter</string>
     <string name="_0">0</string>
     <string name="view_model_counter">View Model Counter</string>
+    <string name="previous_activity">Previous Activity</string>
+    <string name="next_activity">Next Activity</string>
 </resources>

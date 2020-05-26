@@ -9,7 +9,7 @@
         <item name="colorOnError">@color/colorAccent</item>
     </style>
 
-    <style name="CounterCard">
+    <style name="CounterCard" parent="Widget.MaterialComponents.CardView">
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">0dp</item>
@@ -57,12 +57,17 @@
     </style>
 
     <style name="Button.PositiveButton">
-        <item name="android:colorButtonNormal">@color/sky_blue</item>
-        <item name="android:backgroundTint">@color/sky_blue</item>
+        <item name="android:colorButtonNormal">@color/blue</item>
+        <item name="android:backgroundTint">@color/blue</item>
     </style>
 
     <style name="Button.NegativeButton">
         <item name="android:colorButtonNormal">@color/danger</item>
         <item name="android:backgroundTint">@color/danger</item>
+    </style>
+
+    <style name="Button.NeutralButton">
+        <item name="android:colorButtonNormal">@color/grey</item>
+        <item name="android:backgroundTint">@color/grey</item>
     </style>
 </resources>
