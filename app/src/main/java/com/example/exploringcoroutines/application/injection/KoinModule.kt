@@ -24,7 +24,7 @@ val viewModelModule = module {
 @InternalCoroutinesApi
 val domainModule = module {
     factory { ObserveInformationUseCase(get()) }
-    factory { UpdateAppStateUseCase(get()) }
+    single { UpdateAppStateUseCase(get()) }
     single { AppState() }
 }
 

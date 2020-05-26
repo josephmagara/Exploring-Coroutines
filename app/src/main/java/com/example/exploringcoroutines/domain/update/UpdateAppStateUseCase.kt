@@ -23,7 +23,7 @@ class UpdateAppStateUseCase constructor(private val appState: AppState) {
         useCaseStateUpdateJob = GlobalScope.launch {
             repeat(1000) {
                 updateState(UpdateSource.UseCase(it))
-                delay(1000L)
+                delay(700L)
             }
         }
     }
