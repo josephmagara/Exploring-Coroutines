@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.exploringcoroutines.R
+import kotlinx.android.synthetic.main.first_activity_main.*
 import kotlinx.android.synthetic.main.second_activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -27,8 +28,12 @@ class SecondActivity : AppCompatActivity() {
             secondViewModel.stopClicked()
         }
 
-        secondViewModel.lastUpdate().observe(this, Observer {
-            textview_second_activity.text = it
+        secondViewModel.lastViewModelUpdate().observe(this, Observer {
+            second_view_model_counter.text = it
+        })
+
+        secondViewModel.lastUseCaseUpdate().observe(this, Observer {
+            second_activity_usecase_counter.text = it
         })
     }
 }

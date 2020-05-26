@@ -20,13 +20,14 @@ class SecondViewModel(
     private val updateAppStateUseCase: UpdateAppStateUseCase,
     private val observeInformationUseCase: ObserveInformationUseCase
 ) : ViewModel() {
-    private val lastUpdate: MutableLiveData<String> = MutableLiveData()
+    private val lastViewModelUpdate: MutableLiveData<String> = MutableLiveData()
+    private val lastUseCaseUpdate: MutableLiveData<String> = MutableLiveData()
     private lateinit var updateStateJob: Job
 
     init {
         viewModelScope.launch {
             observeInformationUseCase.lastUpdateFlow().collect {
-                lastUpdate.value = it
+                lastViewModelUpdate.value = it
             }
         }
     }
@@ -47,5 +48,7 @@ class SecondViewModel(
         }
     }
 
-    fun lastUpdate(): LiveData<String> = lastUpdate
+    fun lastViewModelUpdate(): LiveData<String> = lastViewModelUpdate
+
+    fun lastUseCaseUpdate(): LiveData<String> = lastUseCaseUpdate
 }

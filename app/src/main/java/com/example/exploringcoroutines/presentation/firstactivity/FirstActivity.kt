@@ -27,8 +27,8 @@ class FirstActivity : AppCompatActivity() {
             firstViewModel.stopClicked()
         }
 
-        firstViewModel.lastUpdate().observe(this, Observer {
-            textview_first_activity.text = it
+        firstViewModel.lastViewModelUpdate().observe(this, Observer {
+            first_view_model_counter.text = it
         })
     }
 }
