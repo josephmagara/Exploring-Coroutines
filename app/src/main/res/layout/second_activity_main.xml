@@ -9,26 +9,25 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/usecase_counter_card"
         style="@style/CounterCard"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/second_button_start_emitting"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/view_model_counter_card"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/usecase_title"
-            style="@style/CounterCardTitle"
+            style="@style/CounterCardText.Title"
             android:text="@string/usecase_update" />
 
         <TextView
             android:id="@+id/second_activity_usecase_counter"
-            style="@style/CounterCardBody"
+            style="@style/CounterCardText.Body"
             android:layout_gravity="center"
             android:text="@string/_0" />
 
         <TextView
             android:id="@+id/second_view_usecase_counter_subtitle"
-            style="@style/CounterCardSubtitle"
+            style="@style/CounterCardText.Subtitle"
             tools:text="@string/usecase_update" />
 
     </com.google.android.material.card.MaterialCardView>
@@ -36,25 +35,24 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/view_model_counter_card"
         style="@style/CounterCard"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/second_button_stop_emitting"
         app:layout_constraintLeft_toRightOf="@id/usecase_counter_card"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/view_model_title"
-            style="@style/CounterCardTitle"
+            style="@style/CounterCardText.Title"
             android:text="@string/view_model_counter" />
 
         <TextView
             android:id="@+id/second_view_model_counter"
-            style="@style/CounterCardBody"
-            tools:text="0" />
+            style="@style/CounterCardText.Body"
+            android:text="@string/_0" />
 
         <TextView
             android:id="@+id/second_view_counter_subtitle"
-            style="@style/CounterCardSubtitle"
+            style="@style/CounterCardText.Subtitle"
             tools:text="@string/usecase_update" />
 
     </com.google.android.material.card.MaterialCardView>

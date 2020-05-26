@@ -63,7 +63,7 @@ class FirstViewModel(
             repeat(1000) {
                 val update = ViewModelUpdate.FromFirstViewModel(it)
                 updateAppStateUseCase.updateState(UpdateSource.ViewModel(update))
-                delay(500L)
+                delay(1000L)
             }
         }
     }
