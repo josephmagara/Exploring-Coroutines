@@ -10,6 +10,6 @@ sealed class UpdateSource(val count: Int, val description: String) {
 }
 
 sealed class ViewModelUpdate(val updateCount: Int, val description: String) {
-    data class FromFirstViewModel(val count: Int) : ViewModelUpdate(count, "First View Model")
-    data class FromSecondViewModel(val count: Int) : ViewModelUpdate(count, "Second View Model")
+    data class FromFirstViewModel(val count: Int) : ViewModelUpdate(count, "From first view model")
+    data class FromSecondViewModel(val count: Int) : ViewModelUpdate(count, "From second view model")
 }

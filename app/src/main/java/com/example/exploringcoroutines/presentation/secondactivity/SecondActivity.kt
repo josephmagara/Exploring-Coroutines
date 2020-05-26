@@ -19,7 +19,7 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.first_activity_main)
+        setContentView(R.layout.second_activity_main)
 
         second_button_start_emitting.setOnClickListener {
             secondViewModel.startClicked()
@@ -44,6 +44,10 @@ class SecondActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+
+    }
     private fun startFirstActivity(){
         val intent = Intent(baseContext, FirstActivity::class.java)
         startActivity(intent)

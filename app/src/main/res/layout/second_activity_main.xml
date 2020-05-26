@@ -78,7 +78,7 @@
     <Button
         android:id="@+id/go_to_first_activity_button"
         style="@style/Button.NeutralButton"
-        android:text="@string/next_activity"
+        android:text="@string/previous_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
