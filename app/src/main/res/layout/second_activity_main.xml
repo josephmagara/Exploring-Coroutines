@@ -26,6 +26,11 @@
             android:layout_gravity="center"
             android:text="@string/_0" />
 
+        <TextView
+            android:id="@+id/second_view_usecase_counter_subtitle"
+            style="@style/CounterCardSubtitle"
+            tools:text="@string/usecase_update" />
+
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -40,12 +45,17 @@
         <TextView
             android:id="@+id/view_model_title"
             style="@style/CounterCardTitle"
-            android:text="@string/second_view_model_counter" />
+            android:text="@string/view_model_counter" />
 
         <TextView
             android:id="@+id/second_view_model_counter"
             style="@style/CounterCardBody"
             tools:text="0" />
+
+        <TextView
+            android:id="@+id/second_view_counter_subtitle"
+            style="@style/CounterCardSubtitle"
+            tools:text="@string/usecase_update" />
 
     </com.google.android.material.card.MaterialCardView>
 

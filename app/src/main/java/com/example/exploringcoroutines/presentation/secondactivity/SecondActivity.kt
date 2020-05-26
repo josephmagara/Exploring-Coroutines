@@ -29,11 +29,13 @@ class SecondActivity : AppCompatActivity() {
         }
 
         secondViewModel.lastViewModelUpdate().observe(this, Observer {
-            second_view_model_counter.text = it
+            second_view_model_counter.text = it.count
+            second_view_counter_subtitle.text = it.updateSourceDescription
         })
 
         secondViewModel.lastUseCaseUpdate().observe(this, Observer {
-            second_activity_usecase_counter.text = it
+            second_activity_usecase_counter.text = it.count
+            second_view_usecase_counter_subtitle.text = it.updateSourceDescription
         })
     }
 }

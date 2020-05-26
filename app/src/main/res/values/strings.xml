@@ -5,6 +5,5 @@
     <string name="first_activity">First Activity</string>
     <string name="usecase_update">UseCase Update Counter</string>
     <string name="_0">0</string>
-    <string name="first_view_model_counter">First View Model Counter</string>
-    <string name="second_view_model_counter">Second View Model Counter</string>
+    <string name="view_model_counter">View Model Counter</string>
 </resources>

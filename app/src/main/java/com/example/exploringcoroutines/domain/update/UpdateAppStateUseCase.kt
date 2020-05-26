@@ -12,7 +12,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 class UpdateAppStateUseCase constructor(private val appState: AppState) {
 
     @ExperimentalCoroutinesApi
-    suspend fun updateState(updateCount: Int, updateSource: UpdateSource) {
-        appState.lastUpdate.value = "$updateCount update from ${updateSource.stringValue}"
+    suspend fun updateState(updateSource: UpdateSource) {
+        appState.lastUpdate.value = updateSource
     }
 }

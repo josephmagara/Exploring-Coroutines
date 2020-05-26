@@ -1,5 +1,6 @@
 package com.example.exploringcoroutines.domain
 
+import com.example.exploringcoroutines.domain.update.model.UpdateSource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -8,4 +9,4 @@ import kotlinx.coroutines.flow.MutableStateFlow
  */
 
 @ExperimentalCoroutinesApi
-data class AppState constructor(val lastUpdate: MutableStateFlow<String> = MutableStateFlow("No Update"))
+data class AppState constructor(val lastUpdate: MutableStateFlow<UpdateSource?> = MutableStateFlow(null))

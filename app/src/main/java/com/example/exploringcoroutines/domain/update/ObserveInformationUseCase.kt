@@ -1,6 +1,7 @@
 package com.example.exploringcoroutines.domain.update
 
 import com.example.exploringcoroutines.domain.AppState
+import com.example.exploringcoroutines.domain.update.model.UpdateSource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 
@@ -10,5 +11,5 @@ import kotlinx.coroutines.flow.Flow
 @ExperimentalCoroutinesApi
 class ObserveInformationUseCase(private val appState: AppState) {
 
-    fun lastUpdateFlow(): Flow<String> = appState.lastUpdate
+    fun lastUpdateFlow(): Flow<UpdateSource?> = appState.lastUpdate
 }

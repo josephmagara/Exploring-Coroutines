@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.exploringcoroutines.R
 import kotlinx.android.synthetic.main.first_activity_main.*
+import kotlinx.android.synthetic.main.second_activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -28,7 +29,13 @@ class FirstActivity : AppCompatActivity() {
         }
 
         firstViewModel.lastViewModelUpdate().observe(this, Observer {
-            first_view_model_counter.text = it
+            first_view_model_counter.text = it.count
+            first_view_counter_subtitle.text = it.updateSourceDescription
+        })
+
+        firstViewModel.lastUseCaseUpdate().observe(this, Observer {
+            usecase_counter.text = it.count
+            first_view_usecase_counter_subtitle.text = it.updateSourceDescription
         })
     }
 }
