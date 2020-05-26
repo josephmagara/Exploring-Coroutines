@@ -48,6 +48,7 @@ class FirstViewModel(
     }
 
     fun startClicked() {
+        stopCurrentJob()
         //This binds the lifetime of this coroutine to the lifecycle of this view-model
         updateStateJob = viewModelScope.launch {
             repeat(1000) {
@@ -58,8 +59,10 @@ class FirstViewModel(
         }
     }
 
-    fun stopClicked() {
-        if (this::updateStateJob.isInitialized) {
+    fun stopClicked() = stopCurrentJob()
+
+    private fun stopCurrentJob(){
+        if(this::updateStateJob.isInitialized){
             updateStateJob.cancel()
         }
     }

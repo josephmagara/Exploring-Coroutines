@@ -50,6 +50,7 @@ class SecondViewModel(
 
     fun startClicked(){
         //This binds the lifetime of this coroutine to the lifecycle of this view-model
+        stopCurrentJob()
         updateStateJob = viewModelScope.launch {
             repeat(1000){
                 val update = ViewModelUpdate.FromSecondViewModel(it)
@@ -59,7 +60,9 @@ class SecondViewModel(
         }
     }
 
-    fun stopClicked(){
+    fun stopClicked() = stopCurrentJob()
+
+    private fun stopCurrentJob(){
         if(this::updateStateJob.isInitialized){
             updateStateJob.cancel()
         }
