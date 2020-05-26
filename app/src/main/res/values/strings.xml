@@ -3,9 +3,9 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="first_activity">First Activity</string>
-    <string name="usecase_update">UseCase Update Counter</string>
+    <string name="counter_one">Counter 1</string>
     <string name="_0">0</string>
-    <string name="view_model_counter">View Model Counter</string>
+    <string name="counter_two">Counter 2</string>
     <string name="previous_activity">Previous Activity</string>
     <string name="next_activity">Next Activity</string>
 </resources>

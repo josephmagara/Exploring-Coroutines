@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -18,6 +18,7 @@
         <item name="android:orientation">vertical</item>
         <item name="android:elevation">20dp</item>
         <item name="cardCornerRadius">8dp</item>
+        <item name="cardBackgroundColor">@color/transparent_dark_grey</item>
     </style>
 
     <style name="CounterCardText">
@@ -28,14 +29,14 @@
 
     <style name="CounterCardText.Title">
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:textColor">@android:color/darker_gray</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:layout_margin">12dp</item>
     </style>
 
     <style name="CounterCardText.Subtitle">
         <item name="android:layout_gravity">center_horizontal|bottom</item>
-        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">12sp</item>
         <item name="android:layout_margin">12dp</item>
         <item name="android:textStyle">italic</item>
@@ -43,9 +44,8 @@
 
     <style name="CounterCardText.Body">
         <item name="android:layout_gravity">center</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">36sp</item>
     </style>
 
 
@@ -67,7 +67,7 @@
     </style>
 
     <style name="Button.NeutralButton">
-        <item name="android:colorButtonNormal">@color/grey</item>
-        <item name="android:backgroundTint">@color/grey</item>
+        <item name="android:colorButtonNormal">@color/medium_grey</item>
+        <item name="android:backgroundTint">@color/medium_grey</item>
     </style>
 </resources>

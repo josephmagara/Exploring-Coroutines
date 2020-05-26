@@ -26,5 +26,7 @@
     <color name="blue_grey">#607D8B</color>
 
     <color name="danger">@color/red</color>
-    <color name="charcoal_grey">#80141110</color>
+    <color name="dark_grey">#121212</color>
+    <color name="transparent_dark_grey">#1E1E1E</color>
+    <color name="medium_grey">#363636</color>
 </resources>

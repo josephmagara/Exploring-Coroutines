@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     tools:context=".presentation.firstactivity.FirstActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -17,7 +18,7 @@
         <TextView
             android:id="@+id/usecase_title"
             style="@style/CounterCardText.Title"
-            android:text="@string/usecase_update" />
+            android:text="@string/counter_one" />
 
         <TextView
             android:id="@+id/second_activity_usecase_counter"
@@ -28,7 +29,7 @@
         <TextView
             android:id="@+id/second_view_usecase_counter_subtitle"
             style="@style/CounterCardText.Subtitle"
-            tools:text="@string/usecase_update" />
+            tools:text="@string/counter_one" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -43,7 +44,7 @@
         <TextView
             android:id="@+id/view_model_title"
             style="@style/CounterCardText.Title"
-            android:text="@string/view_model_counter" />
+            android:text="@string/counter_two" />
 
         <TextView
             android:id="@+id/second_view_model_counter"
@@ -53,7 +54,7 @@
         <TextView
             android:id="@+id/second_view_counter_subtitle"
             style="@style/CounterCardText.Subtitle"
-            tools:text="@string/usecase_update" />
+            tools:text="@string/counter_one" />
 
     </com.google.android.material.card.MaterialCardView>
 
